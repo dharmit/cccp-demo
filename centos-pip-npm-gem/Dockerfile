@@ -1,5 +1,7 @@
 FROM registry.centos.org/centos/centos
 
+LABEL RUN docker run --net=host --ipc=host centos-pip-npm-gem bash
+
 RUN yum -y install epel-release && \
     yum clean all
 
